@@ -7,9 +7,5 @@ export const isPangram = (pangramString) => {
   let letters = 'abcdefghijklmnopqrstuvwxyz';
   let pangramArray = pangramString.toLowerCase().split("");
   let result = letters.split("").find(letter => !pangramArray.includes(letter))
-  if(result) {
-    return false;
-  } else {
-    return true;
-  }
+  return result ? false : true;
 };
